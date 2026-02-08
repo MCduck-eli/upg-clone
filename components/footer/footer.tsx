@@ -1,0 +1,152 @@
+import Image from "next/image";
+import { FiMessageCircle } from "react-icons/fi";
+import { FiMapPin } from "react-icons/fi";
+
+export default function FooterPage() {
+    return (
+        <div className="w-full bg-neutral-400/20 h-100">
+            <div className="container max-w-7xl mx-auto mt-10 border-b border-pink-500">
+                <div className="flex flex-row w-full gap-2 mb-10">
+                    <div className="relative">
+                        <Image
+                            src={"/upg-logo.png"}
+                            alt="logo"
+                            width={200}
+                            height={200}
+                        />
+                    </div>
+
+                    <div className="mx-40 flex flex-row gap-20">
+                        <div className="flex flex-col gap-2">
+                            <h1 className="font-semibold">Company</h1>
+                            <span className="cursor-pointer hover:text-neutral-600">
+                                Contact
+                            </span>
+                            <span className="cursor-pointer hover:text-neutral-600">
+                                About Us
+                            </span>
+                            <span className="cursor-pointer hover:text-neutral-600">
+                                About Us
+                            </span>
+                            <span className="cursor-pointer hover:text-neutral-600">
+                                Why Us
+                            </span>
+                            <span className="cursor-pointer hover:text-neutral-600">
+                                Public offer
+                            </span>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <h1 className="font-semibold">Service</h1>
+                            <span className="cursor-pointer hover:text-neutral-600">
+                                Upgrade
+                            </span>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <h1 className="font-semibold">Support</h1>
+                            <span className="cursor-pointer hover:text-neutral-600">
+                                Delivery
+                            </span>
+                            <span className="cursor-pointer hover:text-neutral-600">
+                                Method area
+                            </span>
+                            <span className="cursor-pointer hover:text-neutral-600">
+                                FAQ
+                            </span>
+                        </div>
+                        <div className="flex flex-col gap-2">
+                            <h1 className="font-semibold">Projects</h1>
+                            <span className="cursor-pointer hover:text-neutral-600">
+                                Bloggers
+                            </span>
+                            <span className="cursor-pointer hover:text-neutral-600">
+                                Gaming clubs
+                            </span>
+                            <span className="cursor-pointer hover:text-neutral-600">
+                                eSports
+                            </span>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col">
+                        <span className="mb-5 flex flex-row">
+                            <div className="flex items-center">
+                                <FiMessageCircle />
+                            </div>
+                            Phones
+                        </span>
+                        <span className="flex flex-col">
+                            <p>+99890000000 </p> +99XXXXXXX
+                        </span>
+                        <span className="mb-5 flex flex-row">
+                            <div className="flex items-center">
+                                <FiMapPin />
+                            </div>
+                            Phones
+                        </span>
+                        <span className="flex flex-col">
+                            Tashkent, st. Navoi 37 Malika Shopping Center Shop
+                            24
+                        </span>
+                        <span className=" flex flex-row mt-5">
+                            <div className="flex items-center">
+                                <FiMapPin />
+                            </div>
+                            Opening hours
+                        </span>
+                        <span>Every day from 10:00 to 20:00</span>
+                    </div>
+                </div>
+            </div>
+            <div className="container max-w-7xl mx-auto mt-2 flex justify-between">
+                <div className="flex flex-row gap-1">
+                    <Image
+                        src={"/instagram-logo.png"}
+                        alt="instagram"
+                        width={40}
+                        height={40}
+                    />
+                    <span className="flex flex-col text-pink-500">
+                        <p>Instagram</p>
+                        <p>187 thousand subscribers</p>
+                    </span>
+                </div>
+                <div className="flex flex-row gap-1">
+                    <Image
+                        src={"/youtube.webp"}
+                        alt="instagram"
+                        width={40}
+                        height={40}
+                    />
+                    <span className="flex flex-col text-pink-500">
+                        <p>YouTube</p>
+                        <p>121 thousand subscribers</p>
+                    </span>
+                </div>
+                <div className="flex flex-row gap-1">
+                    <Image
+                        src={"/telegram-logo.png"}
+                        alt="instagram"
+                        width={40}
+                        height={40}
+                    />
+                    <span className="flex flex-col text-pink-500">
+                        <p>Telegram</p>
+                        <p>23.4 thousand subscribers</p>
+                    </span>
+                </div>
+                <div className="flex flex-row gap-1">
+                    <Image
+                        src={"/tiktok-logo.png"}
+                        alt="instagram"
+                        width={40}
+                        height={40}
+                    />
+                    <span className="flex flex-col text-pink-500">
+                        <p>Tiktok</p>
+                        <p>30 thousand subscribers</p>
+                    </span>
+                </div>
+            </div>
+        </div>
+    );
+}
