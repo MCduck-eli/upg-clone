@@ -1,3 +1,11 @@
+import HeroCarusel from "@/components/hero/hero-carusel";
+import AllItems from "@/components/items/all-items";
+
 export default function IndexPage() {
-    return <div>IndexPage</div>;
+    return (
+        <>
+            <HeroCarusel />
+            <AllItems />
+        </>
+    );
 }

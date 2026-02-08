@@ -5,7 +5,7 @@ import { FiMapPin } from "react-icons/fi";
 export default function FooterPage() {
     return (
         <div className="w-full bg-neutral-400/20 h-100">
-            <div className="container max-w-7xl mx-auto mt-10 border-b border-pink-500">
+            <div className="container max-w-346 mx-auto mt-10 border-b border-pink-500">
                 <div className="flex flex-row w-full gap-2 mb-10">
                     <div className="relative">
                         <Image
