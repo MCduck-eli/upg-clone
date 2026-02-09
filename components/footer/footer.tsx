@@ -4,10 +4,10 @@ import { FiMapPin } from "react-icons/fi";
 
 export default function FooterPage() {
     return (
-        <div className="w-full bg-neutral-400/20 h-100">
-            <div className="container max-w-346 mx-auto mt-10 border-b border-pink-500">
-                <div className="flex flex-row w-full gap-2 mb-10">
-                    <div className="relative">
+        <div className="w-full bg-neutral-400/20 md:h-100 h-auto">
+            <div className="container max-w-346 md:mx-auto md:mt-10 mt-5 border-b border-pink-500 mx-2 w-auto">
+                <div className="flex md:flex-row flex-col w-full gap-2 mb-10">
+                    <div className="relative mb-4 md:mb-0">
                         <Image
                             src={"/upg-logo.png"}
                             alt="logo"
@@ -16,7 +16,7 @@ export default function FooterPage() {
                         />
                     </div>
 
-                    <div className="mx-40 flex flex-row gap-20">
+                    <div className="mx-40 md:flex flex-row hidden  gap-20">
                         <div className="flex flex-col gap-2">
                             <h1 className="font-semibold">Company</h1>
                             <span className="cursor-pointer hover:text-neutral-600">
@@ -97,7 +97,7 @@ export default function FooterPage() {
                     </div>
                 </div>
             </div>
-            <div className="container max-w-7xl mx-auto mt-2 flex justify-between">
+            <div className="container max-w-7xl mx-auto mt-2 md:flex hidden justify-between">
                 <div className="flex flex-row gap-1">
                     <Image
                         src={"/instagram-logo.png"}
@@ -145,6 +145,61 @@ export default function FooterPage() {
                         <p>Tiktok</p>
                         <p>30 thousand subscribers</p>
                     </span>
+                </div>
+            </div>
+
+            <div className="flex flex-col md:hidden">
+                <div className="flex flex-row gap-4">
+                    <div className="flex flex-row gap-1">
+                        <Image
+                            src={"/instagram-logo.png"}
+                            alt="instagram"
+                            width={30}
+                            height={30}
+                        />
+                        <span className="flex flex-col text-pink-500">
+                            <p>Instagram</p>
+                            <p>187 thousand subscribers</p>
+                        </span>
+                    </div>
+                    <div className="flex flex-row gap-1">
+                        <Image
+                            src={"/youtube.webp"}
+                            alt="instagram"
+                            width={30}
+                            height={30}
+                        />
+                        <span className="flex flex-col text-pink-500">
+                            <p>YouTube</p>
+                            <p>121 thousand subscribers</p>
+                        </span>
+                    </div>
+                </div>
+                <div className="flex flex-row gap-4 mt-2 mb-4">
+                    <div className="flex flex-row gap-1">
+                        <Image
+                            src={"/telegram-logo.png"}
+                            alt="instagram"
+                            width={30}
+                            height={30}
+                        />
+                        <span className="flex flex-col text-pink-500">
+                            <p>Telegram</p>
+                            <p>23.4 thousand subscribers</p>
+                        </span>
+                    </div>
+                    <div className="flex flex-row gap-1">
+                        <Image
+                            src={"/tiktok-logo.png"}
+                            alt="instagram"
+                            width={30}
+                            height={30}
+                        />
+                        <span className="flex flex-col text-pink-500">
+                            <p>Tiktok</p>
+                            <p>30 thousand subscribers</p>
+                        </span>
+                    </div>
                 </div>
             </div>
         </div>

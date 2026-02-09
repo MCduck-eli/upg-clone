@@ -18,17 +18,28 @@ async function getProducts(): Promise<IProducts[]> {
 export default async function AllItems() {
     const products = await getProducts();
     return (
-        <div className="flex flex-col w-full h-auto mt-8 mb-8 ">
-            <h1 className="text-4xl mb-5">New Items</h1>
+        <div className="flex flex-col w-full h-auto mt-8 mb-8  md:mx-0">
+            <h1 className="md:text-4xl text-3xl mb-5 pl-2 md:pl-0">
+                New Items
+            </h1>
 
-            <div className="grid md:grid-cols-5 grid-cols-2 gap-3">
+            <div className="grid md:grid-cols-5 grid-cols-2 gap-3 mx-2">
                 {products &&
                     products.map((product) => (
                         <div
                             key={product.slug}
-                            className="bg-neutral-primary-soft block max-w-sm border border-default rounded-base shadow-xs"
+                            className="bg-neutral-primary-soft block max-w-sm border border-neutral-500/20 rounded-base shadow-xs"
                         >
-                            <div className="relative w-full h-60">
+                            <div className="md:block hidden relative w-full h-60">
+                                <Image
+                                    src={product.image.url}
+                                    alt="image"
+                                    fill
+                                    className="object-cover"
+                                />
+                            </div>
+
+                            <div className="md:hidden block relative w-full h-50">
                                 <Image
                                     src={product.image.url}
                                     alt="image"

@@ -44,7 +44,7 @@ export default function Catalog() {
     ];
 
     return (
-        <div className="flex justify-between w-50 h-auto gap-2">
+        <div className="md:flex hidden justify-between w-50 h-auto gap-2">
             <Popover>
                 <PopoverTrigger asChild>
                     <div className="flex flex-row text-sm bg-pink-500 py-2 px-4 text-white gap-1 cursor-pointer">

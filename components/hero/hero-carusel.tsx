@@ -37,25 +37,37 @@ export default function HeroCarusel() {
     ];
 
     return (
-        <div className="w-full h-120 rounded-base overflow-hidden mt-3">
+        <div className="w-full md:h-120 h-40 rounded-base overflow-hidden md:mt-3 -mt-12.5 ">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
-                navigation
-                pagination={{ clickable: true }}
-                autoplay={{ delay: 3000 }}
                 loop
+                autoplay={{ delay: 3000 }}
+                pagination={{ clickable: true }}
+                breakpoints={{
+                    0: { navigation: false },
+                    768: { navigation: true },
+                }}
                 className="h-full"
             >
-                {catalogItems.map((images) => (
-                    <SwiperSlide className="w-full h-full" key={images.id}>
-                        <Image
-                            src={images.image}
-                            className="object-cover"
-                            fill
-                            alt="catalog"
-                        />
-                    </SwiperSlide>
-                ))}
+                {catalogItems &&
+                    catalogItems.map((images) => (
+                        <SwiperSlide className="w-full h-full" key={images.id}>
+                            <Image
+                                src={images.image}
+                                className="object-cover md:block hidden"
+                                fill
+                                alt="catalog"
+                            />
+
+                            <Image
+                                src={images.image}
+                                className="md:hidden block"
+                                width={1000}
+                                height={900}
+                                alt="catalog"
+                            />
+                        </SwiperSlide>
+                    ))}
             </Swiper>
         </div>
     );
