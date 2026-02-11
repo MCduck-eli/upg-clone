@@ -1,34 +1,31 @@
 import { getService } from "@/app/service/service";
 import IProducts from "@/types/get-products";
-import Image from "next/image";
-import StarRate from "./star-rate";
 import { Button } from "../ui/button";
 import { FiShoppingCart } from "react-icons/fi";
-import { motion } from "framer-motion";
+import Image from "next/image";
+import StarRate from "../items/star-rate";
 import MotionItem from "../motion";
 
 async function getProducts(): Promise<IProducts[]> {
     try {
-        const products = await getService.GetPosts();
-        return products;
+        const detailes = await getService.GetDetails();
+        return detailes;
     } catch (error) {
         console.error("❌ Xato:", error);
         return [];
     }
 }
-
-export default async function AllItems() {
-    const products = await getProducts();
+export default async function Detailes() {
+    const detailes = await getProducts();
     return (
-        <div className="flex flex-col w-full h-auto md:mt-8 mt-5 mb-8  md:mx-0">
+        <div className="flex flex-col w-full h-auto mt-8 mb-8  md:mx-0">
             <h1 className="md:text-4xl text-3xl mb-5 pl-2 md:pl-0">
-                New Items
+                Best Detailes
             </h1>
-
             <div className="grid md:grid-cols-5 grid-cols-2 gap-3 mx-2">
-                {products &&
-                    products.map((product, idx) => (
-                        <MotionItem key={idx}>
+                {detailes &&
+                    detailes.map((product) => (
+                        <MotionItem key={product.slug}>
                             <div
                                 key={product.slug}
                                 className="bg-neutral-primary-soft block max-w-sm border border-neutral-500/20 rounded-base shadow-xs"
@@ -63,18 +60,20 @@ export default async function AllItems() {
                                                 className="w-3 h-3 me-1"
                                                 aria-hidden="true"
                                                 xmlns="http://www.w3.org/2000/svg"
-                                                viewBox="0 0 24 24"
+                                                width="24"
+                                                height="24"
                                                 fill="none"
+                                                viewBox="0 0 24 24"
                                             >
                                                 <path
                                                     stroke="currentColor"
-                                                    strokeLinecap="round"
-                                                    strokeLinejoin="round"
-                                                    strokeWidth={2}
+                                                    stroke-linecap="round"
+                                                    stroke-linejoin="round"
+                                                    stroke-width="2"
                                                     d="M18.122 17.645a7.185 7.185 0 0 1-2.656 2.495 7.06 7.06 0 0 1-3.52.853 6.617 6.617 0 0 1-3.306-.718 6.73 6.73 0 0 1-2.54-2.266c-2.672-4.57.287-8.846.887-9.668A4.448 4.448 0 0 0 8.07 6.31 4.49 4.49 0 0 0 7.997 4c1.284.965 6.43 3.258 5.525 10.631 1.496-1.136 2.7-3.046 2.846-6.216 1.43 1.061 3.985 5.462 1.754 9.23Z"
                                                 />
                                             </svg>
-                                            {product.brend}
+                                            {product.brand}
                                         </span>
                                     </div>
                                 </div>

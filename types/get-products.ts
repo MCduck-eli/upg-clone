@@ -6,4 +6,5 @@ export default interface IProducts {
     image: {
         url: string;
     };
+    brand: string;
 }

@@ -32,4 +32,54 @@ export const getService = {
             return [];
         }
     },
+
+    async GetDetails() {
+        const query = gql`
+            query MyDetails {
+                bestDetailes {
+                    brand
+                    image {
+                        url
+                    }
+                    price
+                    slug
+                    title
+                }
+            }
+        `;
+        try {
+            const result = await request<{ bestDetailes: IProducts[] }>(
+                graphqlAPI,
+                query,
+            );
+            return result.bestDetailes;
+        } catch (error: any) {
+            console.error("❌ GraphQL xatosi:", error.message);
+            return [];
+        }
+    },
+
+    async getComponents() {
+        const query = gql`
+            query MyComponents {
+                components {
+                    image {
+                        url
+                    }
+                    slug
+                    title
+                }
+            }
+        `;
+        try {
+            const result = await request<{ components: IProducts[] }>(
+                graphqlAPI,
+                query,
+            );
+            return result.components;
+        } catch (error: any) {
+            console.error("❌ GraphQL xatosi:", error.message);
+            return [];
+        }
+    },
 };

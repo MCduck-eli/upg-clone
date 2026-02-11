@@ -4,15 +4,23 @@ import { FiMapPin } from "react-icons/fi";
 
 export default function FooterPage() {
     return (
-        <div className="w-full bg-neutral-400/20 md:h-100 h-auto">
+        <div className="w-full dark:bg-black bg-neutral-400/20  md:h-100 h-auto">
             <div className="container max-w-346 md:mx-auto md:mt-10 mt-5 border-b border-pink-500 mx-2 w-auto">
                 <div className="flex md:flex-row flex-col w-full gap-2 mb-10">
                     <div className="relative mb-4 md:mb-0">
                         <Image
-                            src={"/upg-logo.png"}
+                            src="/upg-logo.png"
                             alt="logo"
                             width={200}
                             height={200}
+                            className="dark:hidden block"
+                        />
+                        <Image
+                            src="/logo-dark.png"
+                            alt="logo"
+                            width={200}
+                            height={200}
+                            className="dark:block hidden"
                         />
                     </div>
 

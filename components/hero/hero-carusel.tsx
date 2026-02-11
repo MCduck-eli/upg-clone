@@ -37,7 +37,7 @@ export default function HeroCarusel() {
     ];
 
     return (
-        <div className="w-full md:h-120 h-40 rounded-base overflow-hidden md:mt-3 -mt-12.5 ">
+        <div className="w-full md:h-120 h-50 rounded-base overflow-hidden md:mt-3 -mt-12.5 ">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 loop
