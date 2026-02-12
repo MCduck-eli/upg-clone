@@ -9,9 +9,12 @@
     "lint": "eslint"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.60.0",
+    "@clerk/nextjs": "^6.37.3",
     "autoprefixer": "^10.4.24",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "convex": "^1.31.7",
     "daisyui": "^5.5.18",
     "embla-carousel-react": "^8.6.0",
     "graphql": "^16.12.0",

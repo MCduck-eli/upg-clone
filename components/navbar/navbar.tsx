@@ -15,9 +15,12 @@ import {
 import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import { useState } from "react";
 import { ModeToggle } from "../mode-toggle/mode-toggle";
+import { SignInButton, useAuth, UserButton } from "@clerk/clerk-react";
+import Loader from "../loader/loader";
 
 export default function Navbar() {
     const [open, setOpen] = useState(false);
+    const { isSignedIn, isLoaded } = useAuth();
 
     return (
         <nav className="fixed w-full z-50 top-0 left-0 md:py-2 py-0 bg-background text-foreground border-b border-border transition-colors">
@@ -39,8 +42,8 @@ export default function Navbar() {
                     />
                 </Link>
 
-                <div className="relative flex-1 md:flex-none">
-                    <Input placeholder="Search Product" />
+                <div className="relative flex-1 md:flex-none ">
+                    <Input placeholder="Search Product" className="md:w-120" />
                     <FiSearch
                         size={18}
                         className="absolute right-3 top-1/2 -translate-y-1/2 text-neutral-500 pointer-events-none"
@@ -93,9 +96,21 @@ export default function Navbar() {
                             <span className="relative bottom-1.5">Theme</span>
                         </li>
 
-                        <li className="border h-10 w-12 flex items-center justify-center border-neutral-500/50">
-                            <FiUser size={20} />
-                        </li>
+                        {!isLoaded && <Loader />}
+
+                        {isLoaded && !isSignedIn && (
+                            <SignInButton mode="modal">
+                                <li className="border h-10 w-12 flex items-center justify-center border-neutral-500/50">
+                                    <FiUser size={20} />
+                                </li>
+                            </SignInButton>
+                        )}
+
+                        {isLoaded && isSignedIn && (
+                            <li className="flex items-center justify-center ">
+                                <UserButton afterSignOutUrl="/" />
+                            </li>
+                        )}
                     </ul>
                 </div>
 

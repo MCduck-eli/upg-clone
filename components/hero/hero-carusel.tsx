@@ -6,68 +6,61 @@ import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
+
 import Image from "next/image";
 
 export default function HeroCarusel() {
-    const catalogItems = [
-        {
-            id: "1",
-            image: "/catalog1.png",
-        },
-        {
-            id: "2",
-            image: "/catalog2.png",
-        },
-        {
-            id: "3",
-            image: "/catalog3.png",
-        },
-        {
-            id: "4",
-            image: "/catalog4.png",
-        },
-        {
-            id: "5",
-            image: "/catalog5.png",
-        },
-        {
-            id: "6",
-            image: "/catalog6.png",
-        },
+    const items = [
+        { id: "1", light: "/catalog1.png", dark: "/dark-catalog1.png" },
+        { id: "2", light: "/catalog2.png", dark: "/dark-catalog2.png" },
+        { id: "3", light: "/catalog3.png", dark: "/dark-catalog3.png" },
+        { id: "4", light: "/catalog4.png", dark: "/dark-catalog4.png" },
+        { id: "5", light: "/catalog5.png", dark: "/dark-catalog5.png" },
+        { id: "6", light: "/catalog6.png", dark: "/dark-catalog6.png" },
     ];
 
     return (
-        <div className="w-full md:h-120 h-50 rounded-base overflow-hidden md:mt-3 -mt-12.5 ">
+        <div className="w-full md:h-120 h-65 rounded-base overflow-hidden md:mt-3 -mt-12">
             <Swiper
                 modules={[Navigation, Pagination, Autoplay]}
                 loop
                 autoplay={{ delay: 3000 }}
                 pagination={{ clickable: true }}
+                navigation={{
+                    enabled: true,
+                }}
                 breakpoints={{
-                    0: { navigation: false },
-                    768: { navigation: true },
+                    0: {
+                        navigation: { enabled: false },
+                    },
+                    768: {
+                        navigation: { enabled: true },
+                    },
                 }}
                 className="h-full"
             >
-                {catalogItems &&
-                    catalogItems.map((images) => (
-                        <SwiperSlide className="w-full h-full" key={images.id}>
-                            <Image
-                                src={images.image}
-                                className="object-cover md:block hidden"
-                                fill
-                                alt="catalog"
-                            />
+                {items.map((item) => (
+                    <SwiperSlide
+                        key={item.id}
+                        className="relative w-full h-full"
+                    >
+                        <Image
+                            src={item.light}
+                            alt="catalog"
+                            fill
+                            className="object-cover dark:hidden"
+                            priority
+                        />
 
-                            <Image
-                                src={images.image}
-                                className="md:hidden block"
-                                width={1000}
-                                height={900}
-                                alt="catalog"
-                            />
-                        </SwiperSlide>
-                    ))}
+                        <Image
+                            src={item.dark}
+                            alt="catalog dark"
+                            fill
+                            className="object-cover hidden dark:block"
+                            priority
+                        />
+                    </SwiperSlide>
+                ))}
             </Swiper>
         </div>
     );

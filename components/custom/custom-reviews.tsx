@@ -8,7 +8,7 @@ export default function CustomReviews() {
             <h1 className="text-3xl mb-8">Customer Reviews</h1>
             <div className="flex md:flex-row flex-col gap-4 ">
                 <MotionItem>
-                    <div className="flex flex-col cursor-pointer hover:bg-neutral-400/60 transition-all p-4 ease-in-out duration-200 justify-center dark:bg-black bg-neutral-300/30 border border-neutral-400/30 md:w-120 w-117 h-40 relative">
+                    <div className="flex flex-col cursor-pointer hover:bg-neutral-400/60 transition-all p-4 ease-in-out duration-200 justify-center dark:bg-black bg-neutral-300/30 border border-neutral-400/30 md:w-83 w-117 h-40 relative">
                         <span className="text-pink-500 text-2xl">
                             Overall rating
                         </span>
@@ -16,7 +16,7 @@ export default function CustomReviews() {
                     </div>
                 </MotionItem>
                 <MotionItem>
-                    <div className="flex flex-col cursor-pointer hover:bg-neutral-400/60 transition-all ease-in-out duration-200 justify-center dark:bg-black bg-neutral-300/30 border border-neutral-400/30 md:w-120 w-117 p-4 h-40 relative">
+                    <div className="flex flex-col cursor-pointer hover:bg-neutral-400/60 transition-all ease-in-out duration-200 justify-center dark:bg-black bg-neutral-300/30 border border-neutral-400/30 md:w-83 w-117 p-4 h-40 relative">
                         <span className="text-pink-500 text-2xl">
                             Yandex.uz
                         </span>
@@ -27,7 +27,7 @@ export default function CustomReviews() {
                     </div>
                 </MotionItem>
                 <MotionItem>
-                    <div className="flex flex-col cursor-pointer hover:bg-neutral-400/60 transition-all ease-in-out duration-200 justify-center dark:bg-black bg-neutral-300/30 border border-neutral-400/30 md:w-120 w-117 p-4 h-40 relative">
+                    <div className="flex flex-col cursor-pointer hover:bg-neutral-400/60 transition-all ease-in-out duration-200 justify-center dark:bg-black bg-neutral-300/30 border border-neutral-400/30 md:w-83 w-117 p-4 h-40 relative">
                         <div className="relative">
                             <Image
                                 src={"rating.svg"}
@@ -45,7 +45,7 @@ export default function CustomReviews() {
                     </div>
                 </MotionItem>
                 <MotionItem>
-                    <div className="flex flex-col cursor-pointer hover:bg-neutral-400/60 transition-all ease-in-out duration-200 justify-center dark:bg-black bg-neutral-300/30 border border-neutral-400/30 md:w-120 w-117 p-4 h-40 relative">
+                    <div className="flex flex-col cursor-pointer hover:bg-neutral-400/60 transition-all ease-in-out duration-200 justify-center dark:bg-black bg-neutral-300/30 border border-neutral-400/30 md:w-83 w-117 p-4 h-40 relative">
                         <span className="text-pink-400 text-2xl">500+</span>
                         <div className="flex justify-between mt-5">
                             <span className="text-[15px]">

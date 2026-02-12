@@ -7,6 +7,7 @@ import Catalog from "@/components/catalog/catalog";
 import NextTopLoader from "nextjs-toploader";
 import { Toaster } from "sonner";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import ClientClerkProvider from "@/components/provider/clerk-provider";
 
 const geistSans = Geist({
     variable: "--font-geist-sans",
@@ -33,30 +34,32 @@ export default function RootLayout({
             <body
                 className={`${geistSans.variable} ${geistMono.variable} antialiased`}
             >
-                <ThemeProvider
-                    attribute="class"
-                    defaultTheme="light"
-                    enableSystem
-                    disableTransitionOnChange
-                >
-                    <div className="min-h-screen flex flex-col">
-                        <Navbar />
+                <ClientClerkProvider>
+                    <ThemeProvider
+                        attribute="class"
+                        defaultTheme="light"
+                        enableSystem
+                        disableTransitionOnChange
+                    >
+                        <div className="min-h-screen flex flex-col">
+                            <Navbar />
 
-                        <main className="flex flex-1 flex-col container max-w-345 mx-auto w-full mt-30">
-                            <Catalog />
-                            <NextTopLoader
-                                color="#ec4899"
-                                height={3}
-                                showSpinner={false}
-                                shadow="0 0 10px #ec4899, 0 0 5px #ec4899"
-                            />
-                            {children}
-                            <Toaster />
-                        </main>
+                            <main className="flex flex-1 flex-col container max-w-345 mx-auto w-full mt-30">
+                                <Catalog />
+                                <NextTopLoader
+                                    color="#ec4899"
+                                    height={3}
+                                    showSpinner={false}
+                                    shadow="0 0 10px #ec4899, 0 0 5px #ec4899"
+                                />
+                                {children}
+                                <Toaster />
+                            </main>
 
-                        <FooterPage />
-                    </div>
-                </ThemeProvider>
+                            <FooterPage />
+                        </div>
+                    </ThemeProvider>
+                </ClientClerkProvider>
             </body>
         </html>
     );
