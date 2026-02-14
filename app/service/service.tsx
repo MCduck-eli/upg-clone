@@ -82,4 +82,33 @@ export const getService = {
             return [];
         }
     },
+
+    async searchProducts(search: string) {
+        const query = gql`
+            query SearchProducts($search: String!) {
+                contects(where: { title_contains: $search }) {
+                    slug
+                    title
+                    brend
+                    price
+                    image {
+                        url
+                    }
+                }
+            }
+        `;
+
+        try {
+            const result = await request<{ contects: IProducts[] }>(
+                graphqlAPI,
+                query,
+                { search },
+            );
+
+            return result.contects;
+        } catch (error: any) {
+            console.error("❌ Search xatosi:", error.message);
+            return [];
+        }
+    },
 };

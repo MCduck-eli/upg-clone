@@ -1,9 +1,14 @@
+import { cn } from "@/lib/utils";
 import { Loader2 } from "lucide-react";
 
-export default function Loader() {
+interface LoadingProps {
+    size?: number;
+}
+
+export default function Loader({ size }: LoadingProps) {
     return (
         <div className="w-full flex justify-center items-center">
-            <Loader2 size={24} className="animate-spin text-neutral-500" />
+            <Loader2 size={size} className={cn("animate-spin text-pink-500")} />
         </div>
     );
 }

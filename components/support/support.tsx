@@ -1,6 +1,6 @@
+import MotionItem from "@/lib/motion";
 import { MoveRight } from "lucide-react";
 import Image from "next/image";
-import MotionItem from "../motion";
 
 export default function Support() {
     return (

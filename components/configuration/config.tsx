@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { FaArrowRight } from "react-icons/fa";
 import { MoveRight } from "lucide-react";
-import MotionItem from "../motion";
+import MotionItem from "@/lib/motion";
 
 export default function Config() {
     return (

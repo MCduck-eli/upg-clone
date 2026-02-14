@@ -1,9 +1,9 @@
 import { getService } from "@/app/service/service";
+import MotionItem from "@/lib/motion";
 import IProducts from "@/types/get-products";
 import Image from "next/image";
 
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
-import MotionItem from "../motion";
+import { FaArrowRight } from "react-icons/fa";
 
 async function getProducts(): Promise<IProducts[]> {
     try {

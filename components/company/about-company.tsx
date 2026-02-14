@@ -1,12 +1,14 @@
 import Image from "next/image";
-import { Button } from "../ui/button";
+
 import { MoveRight } from "lucide-react";
-import MotionItem from "../motion";
+import MotionItem from "@/lib/motion";
 
 export default function AboutCompany() {
     return (
         <div className="px-2 md:px-0">
-            <h2 className="text-3xl mb-2 md:pl-0 pl-2 ">About Company</h2>
+            <h2 className="text-3xl mb-2 md:pl-0 pl-2 dark:text-white">
+                About Company
+            </h2>
             <div className="w-full h-auto border border-neutral-500/20 ">
                 <MotionItem>
                     <div className="flex md:justify-between justify-center md:flex-row flex-col ">
@@ -19,7 +21,9 @@ export default function AboutCompany() {
                             />
                         </div>
                         <div className="flex md:w-[50%] w-full flex-col px-4 py-4  text-black md:p-8 p-0 mt-5 md:mt-0">
-                            <h3 className="text-3xl mb-1">About Company</h3>
+                            <h3 className="text-3xl mb-1 dark:text-white">
+                                About Company
+                            </h3>
                             <p className="text-muted-foreground ">
                                 We've been selling computer equipment in
                                 Uzbekistan since 2009. We're official partners
