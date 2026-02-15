@@ -6,48 +6,77 @@ export default function Support() {
     return (
         <div className="w-full h-auto flex-col mt-8 px-4 md:px-0">
             <h1 className="text-4xl mb-4">Support</h1>
+
             <div className="flex md:flex-row flex-col gap-4">
-                <div className="flex flex-col cursor-pointer hover:bg-neutral-400/60 transition-all ease-in-out duration-200 justify-center dark:bg-black bg-neutral-300/30 border border-neutral-400/30 md:w-120 w-113 h-60 relative">
+                <div
+                    className="w-full md:flex-1 h-60 cursor-pointer 
+                    hover:bg-neutral-400/60 transition-all duration-200 
+                    dark:bg-black bg-neutral-300/30 
+                    border border-neutral-400/30 
+                    rounded-xl flex justify-center items-center"
+                >
                     <MotionItem>
-                        <div className="flex flex-col justify-center items-center gap-2">
+                        <div className="flex flex-col justify-center items-center gap-2 text-center px-4">
                             <Image
-                                src={"/usd.png"}
+                                src="/usd.png"
                                 alt="usd"
                                 width={50}
                                 height={50}
                             />
-                            <span>Payment method</span>
-                            <span>All about paying for purchases</span>
+                            <span className="font-semibold">
+                                Payment method
+                            </span>
+                            <span className="text-sm text-gray-500">
+                                All about paying for purchases
+                            </span>
                             <MoveRight />
                         </div>
                     </MotionItem>
                 </div>
-                <div className="flex flex-col cursor-pointer hover:bg-neutral-400/60 transition-all ease-in-out duration-200 justify-center dark:bg-black bg-neutral-300/30 border border-neutral-400/30 md:w-120 w-113 h-60 relative">
+
+                <div
+                    className="w-full md:flex-1 h-60 cursor-pointer 
+                    hover:bg-neutral-400/60 transition-all duration-200 
+                    dark:bg-black bg-neutral-300/30 
+                    border border-neutral-400/30 
+                    rounded-xl flex justify-center items-center"
+                >
                     <MotionItem>
-                        <div className=" flex flex-col justify-center items-center gap-2">
+                        <div className="flex flex-col justify-center items-center gap-2 text-center px-4">
                             <Image
-                                src={"/faq.png"}
+                                src="/faq.png"
                                 alt="FAQ"
                                 width={70}
                                 height={70}
                             />
-                            <span>FAQ</span>
-                            <span>All about frequently asked questions</span>
+                            <span className="font-semibold">FAQ</span>
+                            <span className="text-sm text-gray-500">
+                                All about frequently asked questions
+                            </span>
                             <MoveRight />
                         </div>
                     </MotionItem>
                 </div>
-                <div className="flex flex-col cursor-pointer hover:bg-neutral-400/60 transition-all ease-in-out duration-200 justify-center dark:bg-black bg-neutral-300/30 border border-neutral-400/30 md:w-120 w-113 h-60 relative">
+
+                <div
+                    className="w-full md:flex-1 h-60 cursor-pointer 
+                    hover:bg-neutral-400/60 transition-all duration-200 
+                    dark:bg-black bg-neutral-300/30 
+                    border border-neutral-400/30 
+                    rounded-xl flex justify-center items-center"
+                >
                     <MotionItem>
-                        <div className=" flex flex-col justify-center items-center gap-2">
+                        <div className="flex flex-col justify-center items-center gap-2 text-center px-4">
                             <Image
-                                src={"/delivery.png"}
+                                src="/delivery.png"
                                 alt="delivery"
                                 width={50}
                                 height={50}
                             />
-                            <span>Delivery</span>
-                            <span>Delivery information</span>
+                            <span className="font-semibold">Delivery</span>
+                            <span className="text-sm text-gray-500">
+                                Delivery information
+                            </span>
                             <MoveRight />
                         </div>
                     </MotionItem>

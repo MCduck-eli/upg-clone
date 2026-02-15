@@ -155,61 +155,6 @@ export default function FooterPage() {
                     </span>
                 </div>
             </div>
-
-            <div className="flex flex-col md:hidden">
-                <div className="flex flex-row gap-4">
-                    <div className="flex flex-row gap-1">
-                        <Image
-                            src={"/insta-log.png"}
-                            alt="instagram"
-                            width={30}
-                            height={5}
-                        />
-                        <span className="flex flex-col text-pink-500">
-                            <p>Instagram</p>
-                            <p>187 thousand subscribers</p>
-                        </span>
-                    </div>
-                    <div className="flex flex-row gap-1">
-                        <Image
-                            src={"/youtube-log.png"}
-                            alt="instagram"
-                            width={30}
-                            height={5}
-                        />
-                        <span className="flex flex-col text-pink-500">
-                            <p>YouTube</p>
-                            <p>121 thousand subscribers</p>
-                        </span>
-                    </div>
-                </div>
-                <div className="flex flex-row gap-4 mt-2 mb-4">
-                    <div className="flex flex-row gap-1">
-                        <Image
-                            src={"/tg-log.png"}
-                            alt="instagram"
-                            width={30}
-                            height={10}
-                        />
-                        <span className="flex flex-col text-pink-500">
-                            <p>Telegram</p>
-                            <p>23.4 thousand subscribers</p>
-                        </span>
-                    </div>
-                    <div className="flex flex-row gap-1">
-                        <Image
-                            src={"/tiktok-log.png"}
-                            alt="instagram"
-                            width={30}
-                            height={10}
-                        />
-                        <span className="flex flex-col text-pink-500">
-                            <p>Tiktok</p>
-                            <p>30 thousand subscribers</p>
-                        </span>
-                    </div>
-                </div>
-            </div>
         </div>
     );
 }

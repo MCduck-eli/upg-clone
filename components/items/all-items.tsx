@@ -55,7 +55,7 @@ export default async function AllItems() {
                                         />
                                     </div>
                                     <div className="p-6 ">
-                                        <h5 className=" text-[15px] tracking-tight text-heading h-15">
+                                        <h5 className=" text-[15px] tracking-tight text-heading h-15 line-clamp-2">
                                             {product.title}
                                         </h5>
                                         <div className="w-full flex justify-between">

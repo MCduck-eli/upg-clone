@@ -30,7 +30,7 @@ export default async function Detailes() {
                         <MotionItem key={product.slug}>
                             <div
                                 key={product.slug}
-                                className="bg-neutral-primary-soft block max-w-sm border border-neutral-500/20 rounded-base shadow-xs"
+                                className="bg-neutral-primary-soft block max-w-sm border border-neutral-500/20 rounded-base shadow-xs md:h-auto h-120"
                             >
                                 <Link href={`/best/${product.slug}`}>
                                     <div className="md:block hidden relative w-full h-60">
@@ -51,7 +51,7 @@ export default async function Detailes() {
                                         />
                                     </div>
                                     <div className="p-6 ">
-                                        <h5 className=" text-[15px] tracking-tight text-heading h-15">
+                                        <h5 className=" text-[15px] tracking-tight text-heading h-15 line-clamp-2">
                                             {product.title}
                                         </h5>
                                         <div className="w-full flex justify-between">
