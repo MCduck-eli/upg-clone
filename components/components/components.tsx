@@ -36,7 +36,7 @@ export default async function Components() {
                                 />
                             </div>
 
-                            <div className="md:hidden block relative w-full h-50">
+                            <div className="md:hidden block relative w-full h-40">
                                 <Image
                                     src={items.image.url}
                                     alt="image"

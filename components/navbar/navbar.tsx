@@ -165,14 +165,14 @@ export default function Navbar() {
 
                         {isLoaded && !isSignedIn && (
                             <SignInButton mode="modal">
-                                <li className="border h-10 w-12 flex items-center justify-center border-neutral-500/50">
+                                <li className="border h-10 w-12 flex items-center justify-center border-neutral-500/50 relative bottom-1">
                                     <FiUser size={20} />
                                 </li>
                             </SignInButton>
                         )}
 
                         {isLoaded && isSignedIn && (
-                            <li className="flex items-center justify-center ">
+                            <li className="flex items-center justify-center">
                                 <UserButton afterSignOutUrl="/" />
                             </li>
                         )}
@@ -181,7 +181,21 @@ export default function Navbar() {
 
                 <div className="flex md:hidden items-center gap-4">
                     <ModeToggle />
-                    <FiCreditCard size={20} />
+                    {!isLoaded && <Loader />}
+
+                    {isLoaded && !isSignedIn && (
+                        <SignInButton mode="modal">
+                            <li className="border h-10 w-12 flex items-center justify-center border-neutral-500/50 ">
+                                <FiUser size={20} />
+                            </li>
+                        </SignInButton>
+                    )}
+
+                    {isLoaded && isSignedIn && (
+                        <li className="flex items-center justify-center">
+                            <UserButton afterSignOutUrl="/" />
+                        </li>
+                    )}
                 </div>
             </div>
         </nav>

@@ -54,7 +54,7 @@ export default async function AllItems() {
                                             className="object-cover"
                                         />
                                     </div>
-                                    <div className="p-6 ">
+                                    <div className="md:p-6  p-2">
                                         <h5 className=" text-[15px] tracking-tight text-heading h-15 line-clamp-2">
                                             {product.title}
                                         </h5>
