@@ -52,18 +52,25 @@ export default function ProductPage() {
     return (
         <section className="text-gray-600 body-font">
             <div className="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
-                <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mb-10 md:mb-0">
-                    <div className="md:block hidden relative w-full h-120">
-                        <Image
-                            src={product.image.url}
-                            alt="image"
-                            fill
-                            className="object-cover"
-                        />
-                    </div>
+                <div className="relative w-full h-120 md:block hidden ">
+                    <Image
+                        src={product.image.url}
+                        alt={product.title}
+                        fill
+                        className="object-cover rounded"
+                    />
                 </div>
-                <div className="lg:grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center">
-                    <h1 className="title-font text-4xl  mb-4 font-medium dark:text-white text-gray-900 ">
+                <div className="relative w-full h-80 md:hidden block ">
+                    <Image
+                        src={product.image.url}
+                        alt={product.title}
+                        fill
+                        className="object-cover rounded"
+                    />
+                </div>
+
+                <div className="lg:grow md:w-1/2 lg:pl-24 md:pl-16 flex flex-col md:items-start md:text-left items-center text-center w-100">
+                    <h1 className="title-font md:text-4xl text-2xl   mb-4 font-medium dark:text-white text-gray-900 ">
                         {product.title}
                     </h1>
                     <div className="flex justify-between gap-10">
@@ -75,13 +82,13 @@ export default function ProductPage() {
                         </div>
                     </div>
                     <div className="flex w-full md:justify-start justify-center items-end gap-2">
-                        <Button className="w-80 bg-pink-500 cursor-pointer text-lg hover:bg-pink-500/80 ">
+                        <Button className="md:w-70 w-50 bg-pink-500 cursor-pointer text-lg hover:bg-pink-500/80 ">
                             Add to Cart
                         </Button>
                         <Link href={"/"}>
                             <Button
                                 variant={"outline"}
-                                className="text-2xl border border-pink-500 w-80 dark:text-white text-black cursor-pointer"
+                                className="text-2xl border border-pink-500 md:w-70 w-50 dark:text-white text-black cursor-pointer"
                             >
                                 Back to home
                             </Button>

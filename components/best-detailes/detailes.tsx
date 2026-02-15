@@ -21,10 +21,10 @@ export default async function Detailes() {
     const detailes = await getProducts();
     return (
         <div className="flex flex-col w-full h-auto mt-8 mb-8  md:mx-0">
-            <h1 className="md:text-4xl text-3xl mb-5 pl-2 md:pl-0">
+            <h1 className="md:text-4xl text-3xl mb-5 pl-4 md:pl-0">
                 Best Detailes
             </h1>
-            <div className="grid md:grid-cols-5 grid-cols-2 gap-3 mx-2">
+            <div className="grid md:grid-cols-5 grid-cols-2 gap-3 mx-4">
                 {detailes &&
                     detailes.map((product) => (
                         <MotionItem key={product.slug}>
@@ -55,7 +55,7 @@ export default async function Detailes() {
                                             {product.title}
                                         </h5>
                                         <div className="w-full flex justify-between">
-                                            <div className="w-2.5">
+                                            <div className="w-2.5 md:block hidden">
                                                 <StarRate />
                                             </div>
                                             <span className="inline-flex  justify-end text-pink-500 bg-pink-500/20 items-center bg-brand-softer border border-brand-subtle text-fg-brand-strong text-xs font-medium px-1.5 py-0.5 rounded-sm">

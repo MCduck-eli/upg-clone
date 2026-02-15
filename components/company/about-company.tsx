@@ -5,10 +5,8 @@ import MotionItem from "@/lib/motion";
 
 export default function AboutCompany() {
     return (
-        <div className="px-2 md:px-0">
-            <h2 className="text-3xl mb-2 md:pl-0 pl-2 dark:text-white">
-                About Company
-            </h2>
+        <div className="px-4 md:px-0">
+            <h2 className="text-3xl mb-2 dark:text-white">About Company</h2>
             <div className="w-full h-auto border border-neutral-500/20 ">
                 <MotionItem>
                     <div className="flex md:justify-between justify-center md:flex-row flex-col ">

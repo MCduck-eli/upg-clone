@@ -7,7 +7,7 @@ import MotionItem from "@/lib/motion";
 export default function Config() {
     return (
         <>
-            <div className="flex flex-col md:hidden px-3">
+            <div className="flex flex-col md:hidden px-4">
                 <h3 className="text-3xl mb-2">Service</h3>
                 <MotionItem>
                     <div className="flex flex-row gap-4">

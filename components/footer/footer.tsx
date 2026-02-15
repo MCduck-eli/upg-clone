@@ -108,10 +108,10 @@ export default function FooterPage() {
             <div className="container max-w-7xl mx-auto mt-2 md:flex hidden justify-between">
                 <div className="flex flex-row gap-1">
                     <Image
-                        src={"/instagram-logo.png"}
+                        src={"/insta-log.png"}
                         alt="instagram"
                         width={40}
-                        height={40}
+                        height={10}
                     />
                     <span className="flex flex-col text-pink-500">
                         <p>Instagram</p>
@@ -120,10 +120,10 @@ export default function FooterPage() {
                 </div>
                 <div className="flex flex-row gap-1">
                     <Image
-                        src={"/youtube.webp"}
+                        src={"/youtube-log.png"}
                         alt="instagram"
                         width={40}
-                        height={40}
+                        height={10}
                     />
                     <span className="flex flex-col text-pink-500">
                         <p>YouTube</p>
@@ -132,10 +132,10 @@ export default function FooterPage() {
                 </div>
                 <div className="flex flex-row gap-1">
                     <Image
-                        src={"/telegram-logo.png"}
+                        src={"/tg-log.png"}
                         alt="instagram"
                         width={40}
-                        height={40}
+                        height={10}
                     />
                     <span className="flex flex-col text-pink-500">
                         <p>Telegram</p>
@@ -144,10 +144,10 @@ export default function FooterPage() {
                 </div>
                 <div className="flex flex-row gap-1">
                     <Image
-                        src={"/tiktok-logo.png"}
+                        src={"/tiktok-log.png"}
                         alt="instagram"
                         width={40}
-                        height={40}
+                        height={10}
                     />
                     <span className="flex flex-col text-pink-500">
                         <p>Tiktok</p>
@@ -160,10 +160,10 @@ export default function FooterPage() {
                 <div className="flex flex-row gap-4">
                     <div className="flex flex-row gap-1">
                         <Image
-                            src={"/instagram-logo.png"}
+                            src={"/insta-log.png"}
                             alt="instagram"
                             width={30}
-                            height={30}
+                            height={5}
                         />
                         <span className="flex flex-col text-pink-500">
                             <p>Instagram</p>
@@ -172,10 +172,10 @@ export default function FooterPage() {
                     </div>
                     <div className="flex flex-row gap-1">
                         <Image
-                            src={"/youtube.webp"}
+                            src={"/youtube-log.png"}
                             alt="instagram"
                             width={30}
-                            height={30}
+                            height={5}
                         />
                         <span className="flex flex-col text-pink-500">
                             <p>YouTube</p>
@@ -186,10 +186,10 @@ export default function FooterPage() {
                 <div className="flex flex-row gap-4 mt-2 mb-4">
                     <div className="flex flex-row gap-1">
                         <Image
-                            src={"/telegram-logo.png"}
+                            src={"/tg-log.png"}
                             alt="instagram"
                             width={30}
-                            height={30}
+                            height={10}
                         />
                         <span className="flex flex-col text-pink-500">
                             <p>Telegram</p>
@@ -198,10 +198,10 @@ export default function FooterPage() {
                     </div>
                     <div className="flex flex-row gap-1">
                         <Image
-                            src={"/tiktok-logo.png"}
+                            src={"/tiktok-log.png"}
                             alt="instagram"
                             width={30}
-                            height={30}
+                            height={10}
                         />
                         <span className="flex flex-col text-pink-500">
                             <p>Tiktok</p>
