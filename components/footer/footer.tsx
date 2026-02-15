@@ -7,7 +7,7 @@ export default function FooterPage() {
         <div className="w-full dark:bg-black bg-neutral-400/20  md:h-100 h-auto">
             <div className="container max-w-346 md:mx-auto md:mt-10 mt-5 border-b border-pink-500 mx-2 w-auto">
                 <div className="flex md:flex-row flex-col w-full gap-2 mb-10">
-                    <div className="relative mb-4 md:mb-0">
+                    <div className="relative mb-4 md:mb-0 md:block hidden">
                         <Image
                             src="/upg-logo.png"
                             alt="logo"
@@ -20,6 +20,23 @@ export default function FooterPage() {
                             alt="logo"
                             width={200}
                             height={200}
+                            className="dark:block hidden"
+                        />
+                    </div>
+
+                    <div className="relative mb-4 md:mb-0 md:hidden block">
+                        <Image
+                            src="/upg-logo.png"
+                            alt="logo"
+                            width={150}
+                            height={150}
+                            className="dark:hidden block"
+                        />
+                        <Image
+                            src="/logo-dark.png"
+                            alt="logo"
+                            width={150}
+                            height={150}
                             className="dark:block hidden"
                         />
                     </div>

@@ -47,7 +47,10 @@ export default function Navbar() {
     return (
         <nav className="fixed w-full z-50 top-0 left-0 md:py-2 py-0 bg-background text-foreground border-b border-border transition-colors">
             <div className="max-w-345 flex flex-wrap items-center justify-between gap-4 mx-auto p-4">
-                <Link href="/" className="flex items-center space-x-3">
+                <Link
+                    href="/"
+                    className="md:flex items-center space-x-3 hidden"
+                >
                     <Image
                         src="/upg-logo.png"
                         alt="logo"
@@ -60,6 +63,26 @@ export default function Navbar() {
                         alt="logo"
                         width={150}
                         height={150}
+                        className="dark:block hidden"
+                    />
+                </Link>
+
+                <Link
+                    href="/"
+                    className="flex items-center space-x-3 md:hidden"
+                >
+                    <Image
+                        src="/upg-logo.png"
+                        alt="logo"
+                        width={80}
+                        height={80}
+                        className="dark:hidden block"
+                    />
+                    <Image
+                        src="/logo-dark.png"
+                        alt="logo"
+                        width={80}
+                        height={80}
                         className="dark:block hidden"
                     />
                 </Link>
